@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txtInfo.Text" xml:space="preserve">
+    <value> Nebula Runsomware - Known Weaknesses And Key &amp; IV Of Victims.
+
+These were the only vulnerabilities I could find in this sample:
+
+1. **Key &amp; IV Local Storage**  
+   - If the Runsomware fails to send the generated AES Key and IV to its C2 webhook, it stores them in %temp% folder unencrypted.  
+   - This allows recovery of keys directly from the infected machine.
+
+2. **Hardcoded Victim Identifiers**  
+   - Each infection uses a Victim Code that is not protected.  
+   - Keys can be mapped to Victim Codes found in local logs.
+
+3. **No Key Rotation**  
+   - The Runnsomware uses one AES Key/IV pair per infection, without periodic rotation.  
+   - This makes static analysis easier.
+
+4. **No Secure Deletion**  
+   - The Runsomware does not securely wipe original files before encryption.  
+   - Original data can be partially recovered using forensic tools.
+   - I Also Witnessed Some Forensic Tools Saving Files From This Runsomware.
+
+5. **Weak Communication Logic**  
+   - If the network is blocked, the Runnsomware does not retry sending the keys.  
+   - This leaves keys only locally stored, recoverable by analysts.
+
+---
+Victim Code: AF8250E0-04D0-411A-B041-CE1B75B818A7
+Key: AqjtejRiy7a7sKJfRWtlGw==
+IV: Jm+mz40aVWkYh8rKhOQXaQ==
+
+Victim Code: 9C131EDC-65A3-4FE4-8AAE-FA03142F911C
+Key: 0fGIhkDo4+6208f3DmeRnA==
+IV: 3TbU5cpVb0KRB3oB9vgn3Q==
+
+Victim Code: 93541039-28FA-45AA-8527-43EF94CC4C9F
+AES Key: Lkw8zwaJE8bNdXMQ1fOpsg==
+AES IV: pHKO9IOUCE5hNBIbV6d90A==
+
+Victim Code: 80723E31-9FD2-4ED1-A38D-7E587DD83DA6
+AES Key: nxHYHR4GnIWY9N1ZyRO62A==
+AES IV: PQ+3ypWwiwrKrXUbfHf7Og==
+
+Victim Code: 7D3CCA7B-82F3-4415-AE8C-59D2DAEE7384
+AES Key: T8jp/LICXf0gv7fBpeO8uA==
+AES IV: sApL1qwY/rI5rS3DYj3lTg==
+
+Victim Code: C88FAA53-9F09-45D2-A78F-6D5138DDC07E
+AES Key: NxQj7z0exD7MzN8bdHsong==
+AES IV: q5CAFhuSnEkUacSMHK+SxQ==
+
+Victim Code: 18A26DEB-8B1F-40E8-B3A9-BF974FB44116
+AES Key: IYdgos4xfxLvIpkJNh9O8g==
+AES IV: w+snY9lGcIolecfrQSXEMA==
+
+Victim Code: 3E9CF002-E60A-4CA6-88DB-4E84639306FA
+AES Key: Oti2nUSupMXeXl9dYCUtLg==
+AES IV: D5xry5/BOJ9j6xYxhAaZJA==
+
+Victim Code: 92DD3CFF-8807-4FB5-A7E3-60101B200A30
+AES Key: FTWsP4WPmTiaGZsT76n+8w==
+AES IV: 786P4yUYjH/2c8hrH7dQDA==
+---
+
+These vulnerabilities make it possible to recover files without paying ransom if the keys are extracted from the infected system.</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAIB4AAAEAIACgDwAAFgAAACgAAAAgAAAAPAAAAAEAIAAAAAAAAA8AAMMOAADDDgAAAAAAAAAA
+        AAAICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CQgI/wkICP8JCAj/CAkI/wgJ
+        CP8JCAj/CwgI/wsICP8KCAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgI
+        CP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8JCAj/CQgI/wkICP8LCQj/CwkI/woJ
+        CP8KCgj/CgoI/wsJCP8OCQj/DgkI/wwJCP8KCQn/CQgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgI
+        CP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CQgI/wwICf8MCAn/DAgJ/wsJ
+        CP8LCQj/CwkI/wwJCP8MCQj/DQkI/w4JCP8OCQj/DQkI/wwICf8MCAn/CgkJ/wkJCf8ICAj/CAgI/wgI
+        CP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAkI/wgJCP8JCQj/DQgJ/w0I
+        Cf8OCAn/DgkI/w4JCP8PCQj/EAkI/xAJCP8QCQj/EAkI/xAJCP8PCQj/DwkJ/w4ICP8MCQj/CgkJ/woJ
+        CP8JCAj/CQgJ/wkICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8KCgj/CgoI/wsK
+        CP8OCAn/DwkJ/xAJCf8UCgj/FAoI/xQKCP8UCQj/FAkI/xQJCP8UCQj/FAoI/xMKCP8SCgj/EgoI/xAK
+        CP8OCQj/DgkI/wwJCf8LCQn/CggI/wkICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CQgI/wwJ
+        CP8MCQj/DQkI/xIKCP8UDAn/FgwK/xgMCP8YDAj/GQwI/xgMCP8YCwj/GAsI/xgMCP8YDAj/FwwI/xYM
+        CP8WDQn/FQwJ/xIJCf8SCQn/DgkJ/wsJCf8LCQn/CQgI/wgICP8ICAj/CAgI/wgICP8ICAj/CQgI/wkI
+        CP8KCAj/DQgJ/w8JCP8SCwj/Fw0J/xsQCf8fEwr/IRII/yERCv8eEAn/Gw4I/xkPCP8bDgn/HQ4J/yER
+        Cf8jEQj/IhIJ/yIRCv8gDwz/GQwM/xMLCf8QCQr/DQkJ/wsJCP8KCQn/CQkJ/wgICP8ICAj/CAgI/wgI
+        CP8KCAj/CgkJ/wsJCf8OCAn/EgoI/xcNCP8kEwr/PyIL/08qD/9SKw7/SSgL/zEaCf8hEwj/GxII/x8T
+        CP8qFQr/QyAN/1EsDf9RLA7/USsP/0cmDf8rFQv/GA8J/xMKCv8PCgn/DAkI/woJCf8JCQn/CAgI/wgI
+        CP8ICAj/CAgI/wsJCf8LCQn/DAkJ/xEKCP8WDAj/HBAJ/zofDf+hfTb/upNA/7eOQf+2kUT/WzYV/yoV
+        CP8jFQf/KhYJ/04tDf+mfzj/uZBA/7mOPv+6kD7/tZBD/1IzE/8hEQj/FQwJ/w4JCP8MCQj/CgkJ/wkJ
+        Cf8ICAj/CAgI/wgICP8ICAj/CwkI/wwJCP8PCQj/FQoI/xkNCP8hEgj/SCkL/7qQP/+EVBv/c0EU/7yR
+        Pv90SRv/MhkH/ywZB/8+Hgj/k2os/66CPP9sPhH/ZzsR/3JCEf++kUH/akMX/yUTB/8XDQj/EgoI/w8J
+        Cf8MCAn/CwgJ/wgICP8ICAj/CAgI/wgICP8LCQj/DQkI/xEJCP8WCgj/GQ0I/yMSCf9LKQv/uIw8/20+
+        Ev9YJwr/toc5/3hLGv84Gwj/ORsJ/2xCFv+8lEb/a0ET/z8dCf86HQj/TykK/7WIPf9tRBf/KBQH/xkO
+        CP8UCgj/EQkK/w4ICf8MCAn/CAgI/wgICP8ICAj/CAgI/wsJCP8NCQj/EQoJ/xYKCP8aDQj/IxIJ/0wq
+        C/+4jDz/az4S/1IpCv+0iDr/eksb/z8dCf9SKQr/rYI5/5NoKv9KIwf/ORsJ/zYbCP9LKAr/s4g9/25F
+        F/8oFQf/Gg4I/xULCf8RCQr/DggJ/wwICf8JCQn/CAgI/wgICP8JCQn/DAkI/w8JCP8TCQn/FwsJ/xoO
+        CP8kEwj/SyoL/7eMPP9rPxL/UykJ/7OIOf95Txr/SyII/4dbIf+4jT7/YDEN/0chCf9PKwv/QiEL/00q
+        Cf+0iTz/bUUW/ygVBv8bDgj/FgsI/xMJCf8PCQj/DQkI/wwJCP8JCAj/CAgI/wkJCf8MCQj/EAkI/xQJ
+        Cf8XCwr/Gg4I/yQUCP9KKgv/tow8/2s/Ev9UKAn/tIc5/39OGv9mOQ7/v5BE/4NRG/9SIgv/a0EV/7CO
+        Qf9gNhH/UykJ/7aIPP9tRRb/KBUG/xsOCP8XCwj/FAkI/w8JCP8OCQj/DgkI/wkICP8ICAj/CQkJ/wwJ
+        CP8QCQj/FAkJ/xcLCv8aDgj/IxMI/0oqC/+2jDz/aj8S/1MpCf+3hTj/jlQa/6V2Lv+lejT/VysK/1ws
+        Cv+whjr/2bxX/2s9EP9UKgn/tYg7/21EFv8pFgf/HA8J/xcLCP8UCQj/EAkI/w4JCP8OCQj/CggI/wgI
+        CP8MCAn/DQkI/xAJCP8TCQn/FgsJ/xsOCf8kEwn/SyoL/7WMO/9qPhL/VSkI/7aFOP+weCr/v5ND/2w9
+        EP9RJQr/iVcg/8abQ//DnEP/aj4R/1MqCv+0iDv/bUQW/ykWB/8cDwn/FwsI/xQJCP8QCQj/DgkI/w4J
+        CP8KCAj/CAgI/w0ICf8NCQj/EAkI/xMJCf8WCwn/Gw4J/yQTCv9MKgv/tYw7/2k9Ev9VKAr/t444/9Wq
+        Tf+PXiT/UyYI/2Y2EP+7kD//m2Mh/72TPP9qPxH/VCoK/7SIO/9tRBb/KRYH/xwPCf8XCwj/FAkI/xAJ
+        CP8OCQj/DgkI/woICP8ICAj/DQgJ/w0JCP8QCQn/EwkJ/xcLCf8aDgj/JBMK/0wqC/+1jDv/Zz0S/1Em
+        Cv++mUX/upVE/1suCv9QKAj/n3Eu/6h9NP9yPAz/uJI+/2o/Ev9TKQr/s4g7/21EFv8oFQf/HA8J/xgM
+        CP8UCQj/EAkI/w4JCP8OCQj/CggI/wgICP8KCQn/CwkI/w4JCP8SCgn/FwsJ/xoOCP8kEwr/TCoL/7WN
+        PP9mPRH/RiIH/39VJP9pQhX/SyEJ/3VGGf++k0P/bz4S/2IzC/+3kT3/aT4R/1MpCf+ziDv/bUQX/ygV
+        B/8aDwj/FgsI/xIKCP8OCQj/DAkI/woKCP8JCAj/CAgI/wkJCf8LCQj/DQkI/xIKCf8XCwn/Gg4I/yQT
+        Cv9MKgv/tY08/2c8Ev88HAj/PRwI/z4gCf9WKg//r4Y5/49kJf9MIQr/Wy8N/7eQPf9pPhH/UykJ/7OI
+        O/9tRBf/KBQH/xoPCP8VCwj/EQoI/w4JCP8MCQj/CQoI/wgICP8ICAj/CAgI/wsJCP8NCQj/EQoJ/xYK
+        CP8aDQj/IxIJ/0wqC/+1jTz/ZzwR/zgbB/81Gwn/QiAH/4peJP+xiDz/VCwM/zscC/9XMAz/tpA9/2k+
+        Ef9TKQn/sog7/2xDFv8nEwf/Gg4I/xULCP8RCgj/DgkI/wwJCP8ICQj/CAgI/wgICP8JCAj/DQkI/w4J
+        CP8PCQj/FQkI/xkLCf8iEAn/TSkL/7iOPP90QhL/USUH/00mB/9qPBH/u5JF/3RIGP89HAj/NBkJ/1Uv
+        DP+4kUH/eUUT/2QxCv+2izz/a0QX/yMTB/8aDAr/EwoJ/w4JCP8NCAn/DAgJ/wgICP8ICAj/CAgI/wkI
+        CP8NCQj/DgkI/w8JCP8SCQj/FwsI/x4PCP9DJQn/so8//7mTQf+0hzz/tIY8/8GWRv+Wby//QSAI/ywW
+        Cf8sFgj/TigK/7qSQ//ClEH/t4w9/8igTP9fPBX/IRIH/xULCv8SCQn/DQkI/w0ICf8MCAn/CAgI/wgI
+        CP8ICAj/CQgI/wwJCP8NCQj/DQkI/xAJCP8UCgj/GQ0J/ysXCf9VNRP/bUka/3VJG/93SBr/bUUY/0ck
+        Df8rFgj/JRIK/yMTCv8xGAv/WjcT/3ZIGv9yShn/ZD8W/zEeC/8dDwj/EgsJ/xAJCP8NCQj/DAgJ/wsI
+        Cf8ICAj/CAgI/wgICP8ICAj/CQgI/wkJCf8KCQn/DQkI/xEJCP8VCgn/Gw4J/yIRB/8nFAf/KhUJ/yoU
+        CP8nEwj/IhIK/x8QCP8eDwj/HhAI/x8QCf8jEwj/JxQH/yYVB/8jEwf/GxAI/xULCf8QCAn/DQgJ/woJ
+        Cf8JCAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8LCQj/DQkI/xEJCP8TCwj/FwwI/xoO
+        CP8aDwj/Gg8I/xoPCP8aDgn/GQ0I/xkNCP8ZDQj/GQ0I/xkOCf8YDgn/Fw0J/xcMCP8VCwj/EAkI/w4I
+        CP8MCAn/CQgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wkJCP8LCQj/DQkJ/w4J
+        Cv8RCQn/FAsI/xcLCf8XCgn/FwoJ/xYKCf8VCgj/FQoI/xYLCf8WCwn/FgsJ/xUMCf8UCgj/EwkI/xEJ
+        CP8OCQj/DQkI/wsICf8JCAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wkJ
+        Cf8KCQn/DggJ/w8ICf8QCAn/EwkJ/xMJCf8TCQn/EwkJ/xMJCf8TCQn/EwkJ/xMJCf8SCgn/EQoJ/xAJ
+        CP8PCAj/DQgJ/w0ICf8KCAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgI
+        CP8ICAj/CAgI/wkICP8MCAj/DQgJ/w4ICf8PCQj/DwkI/w8JCP8PCQj/DwkI/w8JCP8PCQj/DwkI/w4J
+        CP8NCQj/DQkI/wsICP8KCAj/CggI/wkICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgI
+        CP8ICAj/CAgI/wgICP8ICAj/CAgI/woICP8LCQn/CwkJ/wwJCP8MCQj/DAkI/wwJCP8MCQj/DAkI/wwJ
+        CP8MCQj/DAkI/wsJCP8LCQj/CQgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgICP8ICAj/CAgI/wgI
+        CP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAA=
+</value>
+  </data>
+</root>

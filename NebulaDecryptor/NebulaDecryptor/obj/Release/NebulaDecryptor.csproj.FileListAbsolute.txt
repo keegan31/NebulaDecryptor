@@ -1,0 +1,12 @@
+C:\Users\Izoly\Desktop\NebulaDecryptor\NebulaDecryptor\obj\Release\NebulaDecryptor.csproj.AssemblyReference.cache
+C:\Users\Izoly\Desktop\NebulaDecryptor\NebulaDecryptor\obj\Release\NebulaDecryptor.Form1.resources
+C:\Users\Izoly\Desktop\NebulaDecryptor\NebulaDecryptor\obj\Release\NebulaDecryptor.Form2.resources
+C:\Users\Izoly\Desktop\NebulaDecryptor\NebulaDecryptor\obj\Release\NebulaDecryptor.Form3.resources
+C:\Users\Izoly\Desktop\NebulaDecryptor\NebulaDecryptor\obj\Release\NebulaDecryptor.Properties.Resources.resources
+C:\Users\Izoly\Desktop\NebulaDecryptor\NebulaDecryptor\obj\Release\NebulaDecryptor.csproj.GenerateResource.cache
+C:\Users\Izoly\Desktop\NebulaDecryptor\NebulaDecryptor\obj\Release\NebulaDecryptor.csproj.CoreCompileInputs.cache
+C:\Users\Izoly\Desktop\NebulaDecryptor\NebulaDecryptor\bin\Release\NebulaDecryptor.exe.config
+C:\Users\Izoly\Desktop\NebulaDecryptor\NebulaDecryptor\bin\Release\NebulaDecryptor.exe
+C:\Users\Izoly\Desktop\NebulaDecryptor\NebulaDecryptor\bin\Release\NebulaDecryptor.pdb
+C:\Users\Izoly\Desktop\NebulaDecryptor\NebulaDecryptor\obj\Release\NebulaDecryptor.exe
+C:\Users\Izoly\Desktop\NebulaDecryptor\NebulaDecryptor\obj\Release\NebulaDecryptor.pdb
